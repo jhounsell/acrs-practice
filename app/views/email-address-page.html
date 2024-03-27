@@ -8,7 +8,12 @@
 
         {{ govukInput({
           label: {
-            text: "Email Address"
+            text: "Enter your email address",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "We will email you a secure link, so you can save your information and return later"
           },
           id: "email-address",
           name: "emailAddress",
@@ -18,7 +23,7 @@
         }) }}
 
         {{ govukButton({
-          text: "Continue"
+          text: "Send secure link"
         })}}
 
       </form>
