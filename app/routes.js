@@ -33,3 +33,12 @@ router.post('/email-address-page', function (req, res) {
     res.redirect('/confirmation-page');
   
   });
+
+  router.all('/sign-in-router', function (req, res, next) {
+    if ((req.session.data['BRPnumber'] == '12345678')) {
+      return res.redirect('/email-address-page');
+      next();
+    } else {
+      return (res.redirect('/sign-in-failed'))
+    }
+  });

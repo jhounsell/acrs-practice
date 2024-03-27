@@ -5,8 +5,24 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
      <h1 class="govuk-heading-xl">
-      Your message has been sent
+      Check your email
      </h1>
+
+    <p>
+      We have emailed a link to:
+    </p>
+    <p>
+      <strong>
+        {{ data['emailAddress']}}
+    </strong>
+    </p>
+    <p>
+      Use the link to open your form.
+    </p>
+
+    <p>
+      <a href="#" class="govuk-link">Resend email</a>
+    </p>
     </div>
   </div>
 {% endblock %}
